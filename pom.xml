@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.easyutils</groupId>
+    <artifactId>utils-cloud</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>Release repository</name>
+            <url>https://maven.pkg.github.com/xuquanru/utils-cloud</url>
+        </repository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+         <!--   <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+                </configuration>
+            </plugin>-->
+
+          <!--  <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version >0.12</version>
+                <configuration>
+                    <message >Maven artifacts for ${project.version}</message>
+                    <noJekyll>true</noJekyll>
+                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>&lt;!&ndash;本地jar地址&ndash;&gt;
+                    <branch>refs/heads/master</branch>&lt;!&ndash;分支的名称&ndash;&gt;
+                    <merge>true</merge>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                    <repositoryName>utils-cloud</repositoryName>&lt;!&ndash;对应github上创建的仓库名称 name&ndash;&gt;
+                    <repositoryOwner>xuquanru</repositoryOwner>&lt;!&ndash;github 仓库所有者即登录用户名&ndash;&gt;
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>-->
+
+
+        </plugins>
+    </build>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <github.global.server>utils-cloud</github.global.server>
+    </properties>
+</project>
